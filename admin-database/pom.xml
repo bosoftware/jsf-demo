@@ -1,0 +1,25 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>admin-database</artifactId>
+	<packaging>jar</packaging>
+	<name>admin-database</name>
+	<url>http://thebosoftware.com/</url>
+	<parent>
+		<groupId>com.bosoftware.jsf.demo</groupId>
+		<artifactId>admin-parent</artifactId>
+		<version>1.0</version>
+	</parent>
+	<properties>
+		<openjpa.version>3.0.0</openjpa.version>
+		
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.apache.openjpa</groupId>
+			<artifactId>openjpa</artifactId>
+			<version>${openjpa.version}</version>
+		</dependency>
+	</dependencies>
+</project>
