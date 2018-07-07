@@ -18,7 +18,7 @@ import com.bosoftware.jsf.demo.entity.User;
  *         7 Jul. 2018
  */
 @Stateless
-public class UserService implements UserServiceRemote {
+public class UserEjb implements UserEjbRemote {
 
 	@PersistenceContext(unitName = "admin-hsqldb")
 	private EntityManager entityManager;

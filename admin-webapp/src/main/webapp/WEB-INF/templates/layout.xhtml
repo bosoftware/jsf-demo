@@ -12,10 +12,15 @@
 <h:body>
 	<h:form>
 		<h3>Responsive</h3>
-		<p:panelGrid columns="2" layout="grid" style="border:none">
-			
-				<ui:include src="/WEB-INF/templates/leftMenu.xhtml"></ui:include>
-				<ui:insert name="content">Content</ui:insert>
+		<p:panelGrid>
+			<p:row>
+				<p:column colspan="2">
+					<ui:include src="/WEB-INF/templates/leftMenu.xhtml"></ui:include>
+				</p:column>
+				<p:column colspan="10">
+					<ui:insert name="content">Content</ui:insert>
+				</p:column>
+			</p:row>
 		</p:panelGrid>
 
 	</h:form>

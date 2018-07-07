@@ -16,7 +16,7 @@ import com.bosoftware.jsf.demo.entity.User;
  */
 
 @Remote
-public interface UserServiceRemote {
+public interface UserEjbRemote {
 
 	public List<User> getUsers();
 
