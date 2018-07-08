@@ -63,4 +63,13 @@ public class UserEjb implements UserEjbRemote {
 			entityManager.persist(user);
 		}
 	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see com.bosoftware.jsf.demo.ejb.UserEjbRemote#findUserById(int)
+	 */
+	public User findUserById(int userId) {
+		return entityManager.find(User.class, userId);
+	}
 }

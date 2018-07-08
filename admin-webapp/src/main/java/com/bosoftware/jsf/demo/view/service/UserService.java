@@ -28,4 +28,8 @@ public class UserService {
 		return userEjb.getUsers();
 	}
 
+	public User findUserById(int userId) {
+		return userEjb.findUserById(userId);
+	}
+
 }

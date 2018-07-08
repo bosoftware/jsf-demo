@@ -11,6 +11,7 @@
 	<ui:define name="content">
 
 		<h:form>
+		<p:growl id="growl" life="2000" />
 			<p:panel id="basic" header="User" footer=""
 				style="margin-bottom:20px">
 				<p:messages>
@@ -18,11 +19,12 @@
 				</p:messages>
 
 				<p:outputLabel for="user" value="Select User: " />
-				<p:selectOneMenu id="user" value="#{userView.selectedUser}"
-					effect="fold" editable="true">
-					<f:selectItems value="#{userView.userList}" var="user"
+				<p:selectOneMenu id="user" value="#{userView.selectedUser}" converter="userConverter" 
+					effect="fold">
+					<f:selectItems value="#{userView.userList}" var="user" 
 						itemLabel="#{user.userName}" itemValue="#{user}" />
 				</p:selectOneMenu>
+				<p:commandButton value="Load User" id="ajax" update="growl" actionListener="#{userView.loadUserDetail}" styleClass="ui-priority-primary" />
 			</p:panel>
 		</h:form>
 	</ui:define>

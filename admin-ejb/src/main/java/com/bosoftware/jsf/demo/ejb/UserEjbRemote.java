@@ -21,5 +21,7 @@ public interface UserEjbRemote {
 	public List<User> getUsers();
 
 	public boolean isLoginSucess(String loginId, String password);
+	
+	public User findUserById(int userId);
 
 }

@@ -6,8 +6,11 @@ package com.bosoftware.jsf.demo.view;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
+import javax.faces.context.FacesContext;
+import javax.faces.event.ActionEvent;
 
 import com.bosoftware.jsf.demo.entity.User;
 import com.bosoftware.jsf.demo.view.service.UserService;
@@ -75,4 +78,8 @@ public class UserView {
 		this.userService = userService;
 	}
 
+	public void loadUserDetail(ActionEvent actionEvent) {
+		FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, "test", null);
+		FacesContext.getCurrentInstance().addMessage(null, message);
+	}
 }
